@@ -31,13 +31,17 @@ function NavHeader() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a href="/projects">Projects</a>
+              <button onClick={() => handleNavigate("/projects")}>
+                Projects
+              </button>
             </li>
             <li>
-              <a href="/experience">Experience</a>
+              <button onClick={() => handleNavigate("/experience")}>
+                Experience
+              </button>
             </li>
             <li>
-              <a href="/about">About</a>
+              <button onClick={() => handleNavigate("/about")}>About</button>
             </li>
           </ul>
         </div>
