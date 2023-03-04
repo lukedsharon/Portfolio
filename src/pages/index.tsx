@@ -11,7 +11,7 @@ export default function Home() {
             <Image src={ProfileImage} alt="asdf" />
           </div>
         </div>
-        <h1 className="text-4xl font-bold">Hello, I'm Luke Sharon</h1>
+        <h1 className="text-4xl font-bold">Hello, Im Luke Sharon</h1>
       </div>
     </MainLayout>
   );
