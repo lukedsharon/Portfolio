@@ -7,7 +7,7 @@ function NavHeader() {
     router.push(path);
   };
   return (
-    <div className="fixed top-0 left-0 flex w-full h-14 justify-between">
+    <div className="fixed top-0 left-0 flex w-full h-20 justify-between p-3">
       <div>
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost sm:hidden">
