@@ -1,8 +1,13 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 function NavHeader() {
+  const router = useRouter();
+  const handleNavigate = (path: string) => {
+    router.push(path);
+  };
   return (
-    <div className="fixed top-0 left-0 flex w-full bg-white h-14 justify-between">
+    <div className="fixed top-0 left-0 flex w-full h-14 justify-between">
       <div>
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost sm:hidden">
@@ -26,33 +31,42 @@ function NavHeader() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <a href="/projects">Projects</a>
             </li>
             <li>
-              <a>Item 2</a>
+              <a href="/experience">Experience</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a href="/about">About</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <button
+          onClick={() => handleNavigate("/")}
+          className="btn btn-ghost normal-case text-xl"
+        >
+          daisyUI
+        </button>
       </div>
       <div className=" hidden sm:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <button onClick={() => handleNavigate("/projects")}>
+              Projects
+            </button>
           </li>
           <li>
-            <a>Item 2</a>
+            <button onClick={() => handleNavigate("/experience")}>
+              Experience
+            </button>
           </li>
           <li>
-            <a>Item 3</a>
+            <button onClick={() => handleNavigate("/about")}>About</button>
           </li>
         </ul>
       </div>
       <div>
-        <a className="btn my-1 mr-1">Get started</a>
+        <button className="btn my-1 mr-1">Get started</button>
       </div>
     </div>
   );
