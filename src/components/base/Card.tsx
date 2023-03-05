@@ -1,20 +1,47 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import ProfileImage from "../../../public/images/profile_image.jpeg";
 import Image from "next/image";
 
-function Card() {
-  return (
-    <div className="card lg:card-side bg-base-200 shadow-xl m-6">
-      <figure>
-        <Image src={ProfileImage} alt="asdf" />
+type CardProps = {
+  image: any;
+  title: string;
+  description: string;
+  buttonTitle: string;
+  imageSide: "left" | "right";
+};
+
+function Card({
+  image,
+  title,
+  description,
+  buttonTitle,
+  imageSide,
+}: CardProps) {
+  return imageSide === "left" ? (
+    <div className="card lg:card-side bg-base-200 shadow-xl m-6 lg:grid lg:grid-cols-4">
+      <figure className="col-span-1 bg-purple-500 relative h-[300px]">
+        <Image src={image} alt="asdf" objectFit="cover" layout="fill" />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">New album is released!</h2>
-        <p>Click the button to listen on Spotiwhy app.</p>
+      <div className="card-body col-span-3">
+        <h2 className="card-title">{title}</h2>
+        <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Listen</button>
+          <button className="btn btn-primary">{buttonTitle}</button>
         </div>
       </div>
+    </div>
+  ) : (
+    <div className="card lg:card-side bg-base-200 shadow-xl m-6 lg:grid lg:grid-cols-4">
+      <div className="card-body col-span-3">
+        <h2 className="card-title">{title}</h2>
+        <p>{description}</p>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary">{buttonTitle}</button>
+        </div>
+      </div>
+      <figure className="col-span-1 bg-purple-500 relative h-[300px]">
+        <Image src={image} alt="asdf" objectFit="cover" layout="fill" />
+      </figure>
     </div>
   );
 }
