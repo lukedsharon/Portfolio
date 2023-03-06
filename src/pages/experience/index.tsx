@@ -1,12 +1,15 @@
-import MainLayout from '@/components/layouts/MainLayout';
-import React from 'react'
+import ExperienceCard from "@/components/base/ExperienceCard";
+import TechExperience from "@/components/base/TechExperience";
+import MainLayout from "@/components/layouts/MainLayout";
+import React from "react";
 
 function index() {
   return (
     <MainLayout>
-      <div>Experience Landing Page!!!</div>
+      <ExperienceCard />
+      <TechExperience />
     </MainLayout>
   );
 }
 
-export default index
+export default index;

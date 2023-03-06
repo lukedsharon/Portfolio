@@ -1,14 +1,35 @@
 import Card from "@/components/base/Card";
 import MainLayout from "@/components/layouts/MainLayout";
 import React from "react";
-
+import LedgerlyLogo from "../../../public/images/ledgerly_logo.jpeg";
+import ConGeniusLogo from "../../../public/images/congenius_logo.png";
+import PlandaBudgetImage from "../../../public/images/planda_budget_image.png";
 function index() {
   return (
     <MainLayout>
       <div>Projects Landing Page!!!</div>
-      <Card />
-      <Card />
-      <Card />
+      <Card
+        image={LedgerlyLogo}
+        title="test"
+        description="test"
+        buttonTitle="Read More"
+        imageSide="left"
+      />
+      <Card
+        image={ConGeniusLogo}
+        title="test"
+        description="test"
+        buttonTitle="Read More"
+        imageSide="right"
+      />
+      <Card
+        image={PlandaBudgetImage}
+        title="test"
+        description="test"
+        buttonTitle="Read More"
+        imageSide="left"
+      />
+
       {/* The button to open modal */}
       <label htmlFor="my-modal-5" className="btn">
         open modal

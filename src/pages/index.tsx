@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import ProfileImage from "../../public/images/profile_image.jpeg";
 import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
