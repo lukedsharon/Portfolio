@@ -4,7 +4,6 @@ import React from "react";
 import LedgerlyLogo from "../../../public/images/ledgerly_logo.jpeg";
 import ConGeniusLogo from "../../../public/images/congenius_logo.png";
 import PlandaBudgetImage from "../../../public/images/planda_budget_image.png";
-
 function index() {
   return (
     <MainLayout>

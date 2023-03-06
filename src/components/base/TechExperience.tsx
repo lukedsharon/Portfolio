@@ -1,5 +1,3 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import TypescriptIcon from "../../../public/logos/typescriptlang-icon.svg";
 import ReactIcon from "../../../public/logos/reactjs-icon.svg";
@@ -11,7 +9,7 @@ import Image from "next/image";
 const TECH_EXPERIENCE = [
   {
     name: "JavaScript",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
 
     years: 3,
   },
@@ -29,13 +27,13 @@ const TECH_EXPERIENCE = [
   },
   {
     name: "Next JS",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
 
     years: 1,
   },
   {
     name: "Google Apps Script",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
 
     years: 1,
   },
@@ -47,23 +45,23 @@ const TECH_EXPERIENCE = [
   },
   {
     name: "Redux / Redux Toolkit",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
 
     years: 1,
   },
   {
     name: "Zustand",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
   },
   {
     name: "React Query",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
 
     years: 1,
   },
   {
     name: "3rd Party APIs",
-    icon: <FontAwesomeIcon icon={faPlus} />,
+    icon: <Image src={TypescriptIcon} alt="asdf" width={25} />,
 
     years: 2,
   },
