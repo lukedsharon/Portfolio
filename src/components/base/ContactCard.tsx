@@ -30,7 +30,7 @@ const CONTACT_INFO = [
 
 function ContactCard() {
   return (
-    <div className="card w-1/3 bg-base-200 text-primary-content m-6">
+    <div className="card w-full sm:w-1/2 lg:w-1/3 bg-base-200 text-primary-content m-3 lg:m-6">
       <div className="card-body">
         <h2 className="card-title">
           {"Contact Me - I'd love to hear from you!"}

@@ -108,15 +108,20 @@ function ExperienceCard() {
     <div className="carousel carousel-center p-4 space-x-4 bg-neutral rounded-box max-w-[1400px] mx-auto">
       {EXPERIENCE.map((job, index) => (
         <div key={index} className="carousel-item flex flex-col">
-          <div className="card w-[500px] h-[300px] bg-base-100 shadow-xl">
-            <div className="card-body grid grid-cols-12">
-              <div className="col-span-3">{job.logo}</div>
-              <div className="col-span-9">
+          <div className="card w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] bg-base-100 shadow-xl overflow-scroll">
+            <div className="card-body grid grid-cols-12 grid-rows-12">
+              <div className="col-span-3 row-span-1">{job.logo}</div>
+              <div className="col-span-8">
                 <h2 className="card-title">{job.company}</h2>
-                <p>
+                <p className="">
                   {job.superTitle} | {job.position}
                 </p>
               </div>
+              <ul className="list-disc col-span-12 row-start-2 row-end-12">
+                {job.description.map((desc, index) => (
+                  <li key={index}>{desc.title}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

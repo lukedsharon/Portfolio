@@ -49,7 +49,7 @@ function NavHeader() {
           onClick={() => handleNavigate("/")}
           className="btn btn-ghost normal-case text-xl"
         >
-          daisyUI
+          Home
         </button>
       </div>
       <div className=" hidden sm:flex">
