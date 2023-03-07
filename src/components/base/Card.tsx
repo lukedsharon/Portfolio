@@ -25,9 +25,6 @@ function Card({
       <div className="card-body col-span-3">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">{buttonTitle}</button>
-        </div>
       </div>
     </div>
   ) : (
@@ -35,9 +32,6 @@ function Card({
       <div className="card-body col-span-3">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">{buttonTitle}</button>
-        </div>
       </div>
       <figure className="col-span-1 bg-purple-500 relative h-[300px]">
         <Image src={image} alt="asdf" objectFit="cover" layout="fill" />
