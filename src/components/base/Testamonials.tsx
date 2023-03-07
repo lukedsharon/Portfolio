@@ -8,7 +8,7 @@ const TESTAMONIALS_CONTENT = [
   {
     name: "Rob Tull",
     quote:
-      "Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future. Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future. Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future. Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future. Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future. Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future.",
+      "Luke joined us fresh out of college and on the back of a summer internship he did for our company. He reported directly to me during both that internship and while working full time and was a tremendous asset to our team during that time. Luke was humble, faithful, diligent, and always ready to learn. He tackled multiple new programming languages and platforms during his time with us and quickly established that he could be trusted to carry new projects through to completion. His work with Salesforce, integrator.io, Google Sheets, and JavaScript has created lasting value for our organization. He built new tools, customized our systems, wrote automations, and integrated data in ways we'll benefit from for a long time. This all while having a great attitude and building relationships with his team members. I would unreservedly recommend Luke as a developer or systems administrator, with the added value of his financial skills and awareness. I'm sure he will be a blessing to the organizations he works for in the future.",
     position: "CIO and Director of Project Management",
     company: "Classy Llama",
   },
@@ -46,22 +46,21 @@ const StageLookup: any = {
 function Testamonials() {
   const router = useRouter();
   return (
-    <div className="flex flex-row">
+    <div className="grid grid-rows-1 grid-cols-12">
       <button
-        className="bg-red-500 btn btn-circle"
+        className=" btn btn-circle col-start-1 col-end-2 justify-self-end self-center mr-1"
         onClick={() =>
           router.push(`about#slide${StageLookup[router.asPath][1]}`)
         }
       >
         ❮
       </button>
-
-      <div className="carousel max-w-[1200px] mx-auto">
+      <div className="carousel max-w-[1200px] col-start-2 col-end-12 rounded-2xl">
         {TESTAMONIALS_CONTENT.map((testamonials, index) => (
           <div
             key={index}
             id={`slide${index + 1}`}
-            className="carousel-item w-full bg-base-200 flex flex-col"
+            className="carousel-item w-full bg-base-200 flex flex-col py-3"
           >
             <div className="flex mb-3">
               <Image src={QuoteLeft2} alt="asdf" width={75} />
@@ -69,14 +68,17 @@ function Testamonials() {
                 <p className="mx-6 mt-6 line-clamp-3 col-span-12">
                   {testamonials.quote}
                 </p>
-                <label htmlFor="my-modal-6" className="btn">
-                  open modal
+                <label
+                  htmlFor={`testamonial-modal-${index}`}
+                  className=" w-fit hover:cursor-pointer col-start-12 font-bold text-accent hover:text-accent-focus"
+                >
+                  Read More
                 </label>
 
                 {/* Put this part before </body> tag */}
                 <input
                   type="checkbox"
-                  id="my-modal-6"
+                  id={`testamonial-modal-${index}`}
                   className="modal-toggle"
                 />
                 <div className="modal modal-bottom sm:modal-middle">
@@ -87,7 +89,10 @@ function Testamonials() {
                       {testamonials.company}
                     </span>
                     <div className="modal-action">
-                      <label htmlFor="my-modal-6" className="btn">
+                      <label
+                        htmlFor={`testamonial-modal-${index}`}
+                        className="btn"
+                      >
                         Done
                       </label>
                     </div>
@@ -104,7 +109,7 @@ function Testamonials() {
         ))}
       </div>
       <button
-        className="btn btn-circle bg-red-500"
+        className="btn btn-circle col-start-12 col-end-12 self-center ml-1"
         onClick={() =>
           router.push(`about#slide${StageLookup[router.asPath][0]}`)
         }
