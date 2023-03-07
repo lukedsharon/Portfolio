@@ -70,7 +70,7 @@ function NavHeader() {
         </ul>
       </div>
       <div>
-        <button className="btn my-1 mr-1">Get started</button>
+        <button className="btn my-1 mr-1">View Résumé</button>
       </div>
     </div>
   );
