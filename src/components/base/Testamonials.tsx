@@ -45,8 +45,6 @@ const StageLookup: any = {
 
 function Testamonials() {
   const router = useRouter();
-  console.log(router.asPath);
-  console.log(StageLookup[router.asPath]);
   return (
     <div className="flex flex-row">
       <button
