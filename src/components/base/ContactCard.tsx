@@ -17,7 +17,10 @@ const CONTACT_INFO = [
   {
     icon: <Image src={LinkedInIcon} alt="asdf" width={25} />,
     title: (
-      <a href={"https://www.linkedin.com/in/luke-sharon/"}>
+      <a
+        href={"https://www.linkedin.com/in/luke-sharon/"}
+        className="underline hover:text-blue-500"
+      >
         linkedin.com/in/luke-sharon
       </a>
     ),
@@ -30,7 +33,7 @@ const CONTACT_INFO = [
 
 function ContactCard() {
   return (
-    <div className="card w-full sm:w-1/2 lg:w-1/3 bg-base-200 text-primary-content m-3 lg:m-6">
+    <div className="card w-full sm:w-1/2 lg:w-1/3 bg-base-200 m-3 lg:m-6">
       <div className="card-body">
         <h2 className="card-title">
           {"Contact Me - I'd love to hear from you!"}

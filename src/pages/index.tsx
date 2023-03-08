@@ -12,7 +12,9 @@ export default function Home() {
             <Image src={ProfileImage} alt="asdf" />
           </div>
         </div>
-        <h1 className="text-4xl font-bold">Hello, Im Luke Sharon</h1>
+        <h1 className="text-4xl font-bold">{`Hello, I'm Luke Sharon`}</h1>
+        <p className="max-w-[600px] p-3">{`I am passionate about Web Development, and specifically JavaScript and React. Take a look at my portfolio, and feel free to reach out; I'd love to hear from you!`}</p>
+        <span className="font-bold text-lg p-3">{`(479) 212-3657 // lukedsharon@gmail.com`}</span>
       </div>
     </MainLayout>
   );

@@ -7,7 +7,9 @@ function index() {
   return (
     <MainLayout>
       <Testamonials />
-      <ContactCard />
+      <div className="w-full flex justify-center">
+        <ContactCard />
+      </div>
     </MainLayout>
   );
 }

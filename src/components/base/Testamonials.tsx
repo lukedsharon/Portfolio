@@ -48,14 +48,14 @@ function Testamonials() {
   return (
     <div className="grid grid-rows-1 grid-cols-12">
       <button
-        className=" btn btn-circle col-start-1 col-end-2 justify-self-end self-center mr-1"
+        className=" btn btn-circle col-start-1 col-end-3 sm:col-start-1 sm:col-end-2 justify-self-end self-center mr-1"
         onClick={() =>
           router.push(`about#slide${StageLookup[router.asPath][1]}`)
         }
       >
         ❮
       </button>
-      <div className="carousel max-w-[1200px] col-start-2 col-end-12 rounded-2xl">
+      <div className="carousel max-w-[1200px] col-start-3 col-end-11 sm:col-start-2 sm:col-end-12 rounded-2xl">
         {TESTAMONIALS_CONTENT.map((testamonials, index) => (
           <div
             key={index}
@@ -63,14 +63,14 @@ function Testamonials() {
             className="carousel-item w-full bg-base-200 flex flex-col py-3"
           >
             <div className="flex mb-3">
-              <Image src={QuoteLeft2} alt="asdf" width={75} />
+              {/* <Image src={QuoteLeft2} alt="asdf" width={75} /> */}
               <section className="grid grid-cols-12">
                 <p className="mx-6 mt-6 line-clamp-3 col-span-12">
                   {testamonials.quote}
                 </p>
                 <label
                   htmlFor={`testamonial-modal-${index}`}
-                  className=" w-fit hover:cursor-pointer col-start-12 font-bold text-accent hover:text-accent-focus"
+                  className=" w-fit hover:cursor-pointer col-start-11 sm:col-start-12 font-bold text-accent hover:text-accent-focus"
                 >
                   Read More
                 </label>
@@ -99,9 +99,9 @@ function Testamonials() {
                   </div>
                 </div>
               </section>
-              <Image src={QuoteRight} alt="asdf" width={75} />
+              {/* <Image src={QuoteRight} alt="asdf" width={75} /> */}
             </div>
-            <span className=" flex justify-end pr-6">
+            <span className=" flex justify-end p-6 lg:pr-6">
               - {testamonials.name}, {testamonials.position} @{" "}
               {testamonials.company}
             </span>
@@ -109,7 +109,7 @@ function Testamonials() {
         ))}
       </div>
       <button
-        className="btn btn-circle col-start-12 col-end-12 self-center ml-1"
+        className="btn btn-circle col-start-11 sm:col-start-12 sm:col-end-12 self-center ml-1"
         onClick={() =>
           router.push(`about#slide${StageLookup[router.asPath][0]}`)
         }

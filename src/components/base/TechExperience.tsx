@@ -79,7 +79,7 @@ const TECH_EXPERIENCE = [
 
 function TechExperience() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-6 bg-base-200 max-w-[1400px] mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-6 bg-base-200 max-w-[1400px] mx-auto mt-6 rounded-2xl">
       {TECH_EXPERIENCE.map((tech, index) => (
         <div
           key={index}
@@ -90,7 +90,7 @@ function TechExperience() {
             <h2 className=" col-span-5 card-title text-black dark:text-white">
               {tech.name}
             </h2>
-            <p className=" col-start-2 col-span-5">
+            <p className=" col-start-2 col-span-5 text-black dark:text-white">
               Years of Experience: {tech.years}
             </p>
           </div>
